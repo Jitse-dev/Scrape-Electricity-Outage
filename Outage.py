@@ -73,4 +73,6 @@ for region in region_codes:
             })
 
 # Step 4: Print as JSON
-print(json.dumps(OUTAGES, ensure_ascii=False, indent=2))
+with open("outages.json", "w", encoding="utf-8") as f:
+    json.dump(OUTAGES, f, ensure_ascii=False, indent=2)
+
