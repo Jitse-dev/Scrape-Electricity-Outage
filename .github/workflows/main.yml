@@ -22,14 +22,14 @@ jobs:
           pip install requests beautifulsoup4
 
       - name: Run outage.py and save output
-        run: python outage.py
+        run: python Outage.py
 
-      - name: Commit and push outages.json
+      - name: Commit and push Outages.json
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add outages.json
-          git diff --cached --quiet || git commit -m "Update outages.json"
+          git add Outages.json
+          git diff --cached --quiet || git commit -m "Update Outages.json"
           git push
         env:
           # Use the automatically provided token to authenticate push
